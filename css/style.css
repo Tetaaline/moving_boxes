@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Parent {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding: 20px;
+    
+    animation: moveBoxes 18s infinite;
+}
+
+.Parent .child {
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+    padding: 15px;
+}
+
+.child:nth-child(1) {
+    background-color: red;
+}
+
+.child:nth-child(2) {
+    background-color: blue;
+}
+
+.child:nth-child(3) {
+    background-color: green;
+}
+
+.child:nth-child(4) {
+    background-color: orange;
+}
+
+.child:nth-child(5) {
+    background-color: purple;
+}
+
+.child:nth-child(6) {
+    background-color: brown;
+}
+
+@keyframes moveBoxes {
+
+    /* Top Left */
+    0% {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Top Center */
+    11.11% {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    /* Top Right */
+    22.22% {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    /* Middle Left */
+    33.33% {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Center */
+    44.44% {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Middle Right */
+    55.55% {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    /* Bottom Left */
+    66.66% {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    /* Bottom Center */
+    77.77% {
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    /* Bottom Right */
+    88.88% {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    /* Back to Top Left */
+    100% {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
